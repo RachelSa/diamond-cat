@@ -1,0 +1,27 @@
+body {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.title {
+  font-size: 3em;
+}
+
+.subtitle{
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.container {
+  text-align: center;
+}
+
+#fortune-display {
+  opacity: 0;
+  min-height: 100px;
+  font-size: 3em;
+  padding-top: 25px;
+}
+
+#fortune-button {
+  font-family: 'Montserrat Alternates', sans-serif;
+}
