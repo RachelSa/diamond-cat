@@ -1,8 +1,10 @@
 const fortuneButton = document.getElementById("fortune-button")
 const fortuneDisplay = document.getElementById("fortune-display")
+let int;
 let len = Object.keys(emojis).length
 
 fortuneButton.onclick = (event) => {
+  window.clearInterval(int)
   let eResults = getEmojis()
   let displayEmojis = emojis[eResults[0]] + " " + emojis[eResults[1]] + " " + emojis[eResults[2]]
   fortuneDisplay.style.opacity = 0
@@ -18,14 +20,15 @@ function getEmojis(){
 }
 
 function revealFortune(){
+
   let opacity = 0
-  let interval = window.setInterval(lessenOpacity, 100)
+  int = window.setInterval(lessenOpacity, 100)
   function lessenOpacity(){
     if (opacity < 1){
       fortuneDisplay.style.opacity = opacity
       opacity += .02
   } else {
-    clearInterval(interval)
+    clearInterval(int)
   }
 }
 }
